@@ -153,3 +153,62 @@ elif num > 1:
     print(f"{num} is not a prime number")
   else:
     print(f"{num} is a prime")
+
+#15 Prime in Range Interval
+
+lower = 300
+upper = 400
+
+print(f"Primes between {lower} & {upper} are: ")
+
+for numb in range(lower,upper):
+  if numb>=lower:
+    for value in range(2,numb):
+      if (numb % value) == 0:
+        break
+    else:
+      print(numb)
+
+#16 Factorial
+
+fact_num = int(input("Enter your number: "))
+
+factorial = 1
+
+if fact_num < 0:
+  print("No Factorial")
+elif fact_num == 0:
+  print("Factorial is 1")
+else:
+  for id in range(1,fact_num+1):
+    factorial = factorial * id
+  print(f"{factorial} is the factorial")
+
+#17 Multiplication Table
+
+m = int(input("Enter your number: "))
+
+for n in range(1,11):
+  print(f"{m}*{n}={m*n}")
+
+#18 Fibonacci Series
+
+nterms = int(input("How many terms you want: "))
+
+n1 = 0
+n2 = 1
+
+count = 0
+
+if nterms <= 0:
+  print("Enter a positive number")
+elif nterms == 1:
+  print(n1)
+else:
+  print("This is Fibonacci Number")
+  while count < nterms:
+    print(n1)
+    nth = n1 + n2
+    n1 = n2
+    n2 = nth
+    count += 1
