@@ -9,7 +9,7 @@ print(f"The sum of {num1} and {num2} is: {sum}")
 
 #3 Finding Sq rt
 a = 9
-sqrt_a = a ** 0.5
+sqrt_a = a**0.5
 print(f"The square root of {a} is: {sqrt_a}")
 
 #4 Area of Triangle (1st Approach)
@@ -18,7 +18,7 @@ base = float(input("Enter: "))
 height = float(input("Enter: "))
 hypotenuse = float(input("Enter: "))
 
-triangle_area1 = 0.5*base*height
+triangle_area1 = 0.5 * base * height
 
 print(f"The 01 triangle area is: {triangle_area1}")
 
@@ -27,9 +27,9 @@ b = float(input("Enter: "))
 c = float(input("Enter: "))
 d = float(input("Enter: "))
 
-s = ((b+c+d)/2)
+s = ((b + c + d) / 2)
 
-triangle_area2 = (s*(s-b)*(s-c)*(s-d))**0.5
+triangle_area2 = (s * (s - b) * (s - c) * (s - d))**0.5
 
 print(f"The 02 triangle area is: {triangle_area2:.1f}")
 
@@ -38,14 +38,14 @@ print(f"The 02 triangle area is: {triangle_area2:.1f}")
 import cmath
 
 a1 = 1
-b1= 5
+b1 = 5
 c1 = 6
 
-determinant = ((b1**2)-(4*a1*c1))
+determinant = ((b1**2) - (4 * a1 * c1))
 
-solution01 = (-b1+cmath.sqrt(determinant))/(2*a1)
+solution01 = (-b1 + cmath.sqrt(determinant)) / (2 * a1)
 
-solution02 = (-b1-cmath.sqrt(determinant))/(2*a1)
+solution02 = (-b1 - cmath.sqrt(determinant)) / (2 * a1)
 
 print(f"The two solutions : {solution01} & {solution02}")
 
@@ -64,7 +64,7 @@ print(f"Result after swapping: {var1} & {var2}")
 
 import random
 
-print(random.randint(0,100))
+print(random.randint(0, 100))
 
 #8 Convert: km to miles
 
@@ -76,7 +76,7 @@ print(f"miles: {miles}")
 #9 Convert: Celcius to Fahrenheit
 
 cel = 98
-fahr = (cel *(9/5))+32
+fahr = (cel * (9 / 5)) + 32
 print(f"Fahrenheit: {fahr}")
 
 #10 Number +, - or zero (if else)
@@ -114,9 +114,9 @@ else:
 #12 Leap Year
 year = int(input("Enter Year: "))
 
-if (year%400==0 and year%100==0):
+if (year % 400 == 0 and year % 100 == 0):
   print(f"{year} is LEAP")
-elif (year%4==0 and year%100!=0):
+elif (year % 4 == 0 and year % 100 != 0):
   print(f"{year} is LEAP")
 else:
   print(f"{year} is Not LEAP")
@@ -127,13 +127,29 @@ val1 = int(input("Enter your 1st value: "))
 val2 = int(input("Enter your 2nd value: "))
 val3 = int(input("Enter your 3rd value: "))
 
-if (val1>=val2 and val1>=val3):
+if (val1 >= val2 and val1 >= val3):
   largest = val1
-elif (val2>=val1 and val2>=val3):
+elif (val2 >= val1 and val2 >= val3):
   largest = val2
 else:
   largest = val3
 
-print(f"{largest} is largest")
+print(f"{largest} is the largest number")
 
-  
+#14 Prime Number
+
+flag = False
+
+num = int(input("Enter Number: "))
+
+if num == 1:
+  print(f"{num} is not a prime")
+elif num > 1:
+  for i in range(2,num):
+    if (num % i)==0:
+      flag = True
+      break
+  if flag:
+    print(f"{num} is not a prime number")
+  else:
+    print(f"{num} is a prime")
