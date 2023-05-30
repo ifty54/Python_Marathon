@@ -212,3 +212,40 @@ else:
     n1 = n2
     n2 = nth
     count += 1
+
+#19 Armstrong Number
+
+your_num = int(input("Enter: "))
+
+pow = len(str(your_num))
+sum1 = 0
+
+temp1 = your_num
+while temp1 > 0:
+  digit = temp1 % 10
+  sum1 += digit ** pow
+  temp1 //= 10
+
+if your_num == sum1:
+  print("This is Armstrong")
+else:
+  print("It's not Armstrong")
+
+#20 Armstrong in Interval
+
+low_limit = 200
+up_limit = 1000
+
+for your_num2 in range(low_limit, up_limit+1):
+  order = len(str(your_num2))
+  sum2 = 0
+  temp2 = your_num2
+  while temp2 > 0:
+    digit2 = temp2 % 10
+    sum2 += digit2 ** order
+    temp2 //= 10
+  if your_num2 == sum2:
+    print(sum2)
+    
+  
+
