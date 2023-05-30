@@ -246,6 +246,33 @@ for your_num2 in range(low_limit, up_limit+1):
     temp2 //= 10
   if your_num2 == sum2:
     print(sum2)
-    
-  
 
+#21 Natural Num Sum
+
+total = int(input("enter number: "))
+
+if total < 0:
+  print("Enter a positive number")
+
+else:
+  total_sum = 0
+  while(total > 0):
+    total_sum += total
+    total -= 1
+  print(f"The sum is {total_sum}")
+
+#22 Power of 2
+
+term = int(input("How many terms?: "))
+print(f"Total terms are: {term}")
+
+result = list(map(lambda x: 2**x, range(term)))
+
+for i_term in range(term):
+  print(f"{result[i_term]}")
+
+#23 Divisibility
+my_list = [12, 65, 54, 39, 102, 339, 220]
+
+outcome = list(filter(lambda x: (x % 19 == 0), my_list))
+print(f"Numbers divisible by 19 are:  {outcome}")
