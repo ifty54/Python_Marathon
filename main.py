@@ -321,3 +321,38 @@ while (True):
   greater = greater + 1
 
 print(f"LCM is {lcm}")
+
+#28 Factors of A Number
+
+num0 = int(input("Number: "))
+factors = []
+
+for i0 in range(1, num0 + 1):
+  if(num0%i0==0):
+    factors.append(i0)
+print(f"the factors of {num0} are: {factors}")
+
+#29 Calculator
+
+print("Select Operation")
+print("1 for add, 2 for sub, 3 for mul, 4 for div")
+choice = input("Enter Choice(1,2,3,4): ")
+
+if choice in ("1","2","3","4"):
+  try:
+    val01 = float(input("1st number: "))
+    val02 = float(input("2nd number: "))
+  except ValueError:
+    print("Invalid")
+    
+  if choice == "1":
+    print(f"{val01 + val02}")
+  elif choice == "2":
+    print(f"{val01 - val02}")
+  elif choice == "3":
+    print(f"{val01 * val02}")
+  elif choice == "4":
+    print(f"{val01 / val02}")
+  else:
+    print("Invalid Input")
+  
