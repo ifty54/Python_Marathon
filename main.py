@@ -276,3 +276,48 @@ my_list = [12, 65, 54, 39, 102, 339, 220]
 
 outcome = list(filter(lambda x: (x % 19 == 0), my_list))
 print(f"Numbers divisible by 19 are:  {outcome}")
+
+#24 Dec-Bin-Hexa-Oct
+
+dec = int(input("Enter your decimal number: "))
+
+print(f"Binary will be: {bin(dec)}")
+print(f"Binary will be: {oct(dec)}")
+print(f"Binary will be: {hex(dec)}")
+
+#25 ASCII
+
+my_input = "i"
+
+print(f"ASCII value of {my_input} is {ord(my_input)}")
+
+#26 HCF & GCD
+
+hcf1 = int(input("first: "))
+hcf2 = int(input("second: "))
+
+if (hcf1 > hcf2):
+  smaller = hcf2
+else:
+  smaller = hcf1
+for no_i in range(1, smaller+1):
+  if ((hcf1 % no_i == 0) and (hcf2 % no_i == 0)):
+    hcf = no_i
+print(f"The HCF is {hcf}")
+
+#27 LCM
+
+lcm1 = int(input("First: "))
+lcm2 = int(input("Second: "))
+
+if lcm1 > lcm2:
+  greater = lcm1
+else:
+  greater = lcm2
+while (True):
+  if((greater % lcm1 == 0) and (greater % lcm2 == 0)):
+    lcm = greater
+    break 
+  greater = greater + 1
+
+print(f"LCM is {lcm}")
