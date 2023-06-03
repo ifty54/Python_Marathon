@@ -18,7 +18,7 @@ base = float(input("Enter: "))
 height = float(input("Enter: "))
 hypotenuse = float(input("Enter: "))
 
-triangle_area1 = 0.5 * base * height
+triangle_area1 = (1/2) * base * height
 
 print(f"The 01 triangle area is: {triangle_area1}")
 
