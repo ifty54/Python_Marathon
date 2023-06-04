@@ -58,7 +58,7 @@ temp = var1
 var1 = var2
 var2 = temp
 
-print(f"Result after swapping: {var1} & {var2}")
+print(f"the result after swapping: {var1} & {var2}")
 
 #7 Random Number
 
