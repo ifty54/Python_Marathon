@@ -145,8 +145,8 @@ num = int(input("Enter Number: "))
 if num == 1:
   print(f"{num} is not a prime")
 elif num > 1:
-  for i in range(2,num):
-    if (num % i)==0:
+  for i in range(2, num):
+    if (num % i) == 0:
       flag = True
       break
   if flag:
@@ -161,9 +161,9 @@ upper = 400
 
 print(f"Primes between {lower} & {upper} are: ")
 
-for numb in range(lower,upper):
-  if numb>=lower:
-    for value in range(2,numb):
+for numb in range(lower, upper):
+  if numb >= lower:
+    for value in range(2, numb):
       if (numb % value) == 0:
         break
     else:
@@ -180,7 +180,7 @@ if fact_num < 0:
 elif fact_num == 0:
   print("Factorial is 1")
 else:
-  for id in range(1,fact_num+1):
+  for id in range(1, fact_num + 1):
     factorial = factorial * id
   print(f"{factorial} is the factorial")
 
@@ -188,7 +188,7 @@ else:
 
 m = int(input("Enter your number: "))
 
-for n in range(1,11):
+for n in range(1, 11):
   print(f"{m}*{n}={m*n}")
 
 #18 Fibonacci Series
@@ -223,7 +223,7 @@ sum1 = 0
 temp1 = your_num
 while temp1 > 0:
   digit = temp1 % 10
-  sum1 += digit ** pow
+  sum1 += digit**pow
   temp1 //= 10
 
 if your_num == sum1:
@@ -236,13 +236,13 @@ else:
 low_limit = 200
 up_limit = 1000
 
-for your_num2 in range(low_limit, up_limit+1):
+for your_num2 in range(low_limit, up_limit + 1):
   order = len(str(your_num2))
   sum2 = 0
   temp2 = your_num2
   while temp2 > 0:
     digit2 = temp2 % 10
-    sum2 += digit2 ** order
+    sum2 += digit2**order
     temp2 //= 10
   if your_num2 == sum2:
     print(sum2)
@@ -256,7 +256,7 @@ if total < 0:
 
 else:
   total_sum = 0
-  while(total > 0):
+  while (total > 0):
     total_sum += total
     total -= 1
   print(f"The sum is {total_sum}")
@@ -300,7 +300,7 @@ if (hcf1 > hcf2):
   smaller = hcf2
 else:
   smaller = hcf1
-for no_i in range(1, smaller+1):
+for no_i in range(1, smaller + 1):
   if ((hcf1 % no_i == 0) and (hcf2 % no_i == 0)):
     hcf = no_i
 print(f"The HCF is {hcf}")
@@ -315,9 +315,9 @@ if lcm1 > lcm2:
 else:
   greater = lcm2
 while (True):
-  if((greater % lcm1 == 0) and (greater % lcm2 == 0)):
+  if ((greater % lcm1 == 0) and (greater % lcm2 == 0)):
     lcm = greater
-    break 
+    break
   greater = greater + 1
 
 print(f"LCM is {lcm}")
@@ -328,7 +328,7 @@ num0 = int(input("Number: "))
 factors = []
 
 for i0 in range(1, num0 + 1):
-  if(num0%i0==0):
+  if (num0 % i0 == 0):
     factors.append(i0)
 print(f"the factors of {num0} are: {factors}")
 
@@ -338,13 +338,13 @@ print("Select Operation")
 print("1 for add, 2 for sub, 3 for mul, 4 for div")
 choice = input("Enter Choice(1,2,3,4): ")
 
-if choice in ("1","2","3","4"):
+if choice in ("1", "2", "3", "4"):
   try:
     val01 = float(input("1st number: "))
     val02 = float(input("2nd number: "))
   except ValueError:
     print("Invalid")
-    
+
   if choice == "1":
     print(f"{val01 + val02}")
   elif choice == "2":
@@ -355,18 +355,19 @@ if choice in ("1","2","3","4"):
     print(f"{val01 / val02}")
   else:
     print("Invalid Input")
-  
+
 #30 Shuffle Deck of Cards
 
 import itertools, random
 
-deck = list(itertools.product(range(1,14),['spade','heart','diamond','club']))
+deck = list(
+  itertools.product(range(1, 14), ['spade', 'heart', 'diamond', 'club']))
 
 random.shuffle(deck)
 
 print("You have got: ")
 for i_deck in range(5):
-  print(deck[i_deck][0], "of", deck[i_deck][1] )
+  print(deck[i_deck][0], "of", deck[i_deck][1])
 
 #31 Calendar
 
@@ -376,5 +377,3 @@ yy = 2023
 mm = 6
 
 print(f"{calendar.month(yy,mm)}")
-
-
