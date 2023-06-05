@@ -356,3 +356,25 @@ if choice in ("1","2","3","4"):
   else:
     print("Invalid Input")
   
+#30 Shuffle Deck of Cards
+
+import itertools, random
+
+deck = list(itertools.product(range(1,14),['spade','heart','diamond','club']))
+
+random.shuffle(deck)
+
+print("You have got: ")
+for i_deck in range(5):
+  print(deck[i_deck][0], "of", deck[i_deck][1] )
+
+#31 Calendar
+
+import calendar
+
+yy = 2023
+mm = 6
+
+print(f"{calendar.month(yy,mm)}")
+
+
