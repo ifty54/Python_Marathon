@@ -18,7 +18,7 @@ base = float(input("Enter: "))
 height = float(input("Enter: "))
 hypotenuse = float(input("Enter: "))
 
-triangle_area1 = (1/2) * base * height
+triangle_area1 = (1 / 2) * base * height
 
 print(f"The 01 triangle area is: {triangle_area1}")
 
@@ -377,3 +377,68 @@ yy = 2023
 mm = 6
 
 print(f"{calendar.month(yy,mm)}")
+
+#32 Fibonacci through Recursion
+
+
+def fib(n):
+  if n <= 1:
+    return n
+  else:
+    return (fib(n - 1) + fib(n - 2))
+
+
+nos = 20
+
+if nos <= 0:
+  print("Enter any positives")
+else:
+  print("Fibonacci Sequence")
+  for i_fib in range(nos):
+    print(fib(i_fib))
+
+
+#33 Natural Number Recursion
+def nat(n):
+  if n <= 1:
+    return 1
+  else:
+    return n + nat(n - 1)
+
+
+tot = 10
+
+if tot < 0:
+  print("Enter a positive number")
+else:
+  print(f"the sum is {nat(tot)}")
+
+#34 Factorial Recursion
+
+
+def factorial(n):
+  if n == 0:
+    return 1
+  else:
+    return n * factorial(n - 1)
+
+
+ex = 5
+
+if ex < 0:
+  print("print something positive")
+else:
+  print(f"{ex}'s has the factorial of {factorial(ex)}")
+
+
+#35 Dec to Bin via Recursion
+def dec_bin(n):
+  if n > 1:
+    dec_bin(n // 2)
+  print(n % 2, end='')
+
+
+dec = 34
+
+dec_bin(dec)
+print()
