@@ -442,3 +442,67 @@ dec = 34
 
 dec_bin(dec)
 print()
+
+#36 Adding 2 Matrices
+xx = [[1,2,3],[4,5,6],[7,8,9]]
+yy = [[3,6,4],[4,1,7],[3,4,1]]
+
+final = [[0,0,0],[0,0,0],[0,0,0]]
+
+for ii in range(len(xx)):
+  for jj in range(len(xx[0])):
+    final[ii][jj] = xx[ii][jj] + yy[ii][jj]
+for r in final:
+  print(r)
+  
+#37 Transpose a Matrix
+matrix = [[1,2],[3,6],[8,7]]
+
+finale = [[0,0,0],[0,0,0]]
+for i in range(len(matrix)):
+  for j in range(len(matrix[0])):
+    finale[j][i] = matrix[i][j]
+
+for r in finale:
+  print(r)
+
+#38 Multiply two Matrices
+xx = [[1,2,3],
+      [4,5,6],
+      [7,8,9]]
+
+yy = [[3,6,4],
+      [4,1,7],
+      [3,4,1]]
+
+final = [[0,0,0],[0,0,0],[0,0,0]]
+
+for i in range(len(xx)):
+  for j in range(len(yy[0])):
+    for k in range(len(yy)):
+      final[i][j] += xx[i][k] * yy[k][j]
+
+for r in final:
+  print(r)
+
+#39 Palindrome
+my_string = "amMa"
+my_string = my_string.casefold()
+
+rev_string = reversed(my_string)
+
+if list(my_string) == list(rev_string):
+  print("It's Palindrome")
+else:
+  print("It's not Palindrome")
+
+#40 Removing Punctuations
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+line = "hey!! Make it- simple!#"
+
+no_punc = ""
+for char in line:
+  if char not in punctuations:
+    no_punc = no_punc + char
+print(no_punc)
