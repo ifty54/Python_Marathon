@@ -152,7 +152,7 @@ elif num > 1:
   if flag:
     print(f"{num} is not a prime number")
   else:
-    print(f"{num} is a prime")
+    print(f"{num} is a prime number")
 
 #15 Prime in Range Interval
 
