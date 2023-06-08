@@ -506,3 +506,84 @@ for char in line:
   if char not in punctuations:
     no_punc = no_punc + char
 print(no_punc)
+
+#41 Sort Alphabetic Order
+kw = input("Enter a string: ")
+
+words = [word.lower() for word in kw.split()]
+
+words.sort()
+
+print("The words order will be:")
+for word in words:
+  print(word)
+
+#42 Set operation
+E = {0, 2, 4, 6, 8}
+N = {1, 2, 3, 4, 5}
+
+print(f"Union: {E|N}")
+print(f"Intersection: {E & N}")
+print(f"Difference: {E-N}")
+print(f"Symmetric: {E^N}")
+
+#43 Count Vowel
+vow = 'aeiou'
+line = input("Enter your line: ")
+
+line = line.casefold()
+
+count_vow = {}.fromkeys(vow, 0)
+
+for character in vow:
+  if character in count_vow:
+    count_vow[character] += 1
+
+print(count_vow)
+
+#44 Merge Mails
+with open("names.txt", "r", encoding="utf-8") as names_file:
+  with open("body.txt", "r", encoding="utf-8") as body_file:
+    body = body_file.read()
+    for name in names_file:
+      mail = "Hello" + name.strip() + "\n" + body
+      with open(name.strip() + ".txt", "w", encoding="utf-8") as mail_file:
+        mail_file.write(mail)
+
+
+#45 Finding Image Size
+def jpeg_res(filename):
+
+  with open(filename,
+            'rb') as img_file:  # open image for reading in binary mode
+
+    img_file.seek(163)  # height of image (in 2 bytes) is at 164th position
+
+    a = img_file.read(2)  # read the 2 bytes
+
+    height = (a[0] << 8) + a[1]  # calculate height
+
+    a = img_file.read(2)  # next 2 bytes is width
+
+    width = (a[0] << 8) + a[1]  # calculate width
+
+  print("The resolution of the image is", width, "x", height)
+
+
+filename = "a.jpg"
+
+jpeg_res(filename)
+
+#46 
+
+#47 Pyramid Patterns
+
+rows = int(input("enter rows: "))
+
+for i_rows in range(rows):
+  for j_rows in range(i_rows+1):
+    print(j_rows+1, end=" ")
+  print("\n")
+
+
+
