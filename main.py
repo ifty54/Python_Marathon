@@ -140,7 +140,7 @@ print(f"{largest} is the largest number")
 
 flag = False
 
-num = int(input("Enter Number: "))
+num = int(input("Enter Your Number: "))
 
 if num == 1:
   print(f"{num} is not a prime")
