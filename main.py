@@ -69,9 +69,9 @@ print(random.randint(0, 100))
 #8 Convert: km to miles
 
 km = 5
-conv_factor = 0.621371
+conv_factor = 0.621
 miles = km * conv_factor
-print(f"miles: {miles}")
+print(f"The miles will be: {miles}")
 
 #9 Convert: Celcius to Fahrenheit
 
