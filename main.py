@@ -585,5 +585,87 @@ for i_rows in range(rows):
     print(j_rows+1, end=" ")
   print("\n")
 
+#48 Dict Merging
+dict1 = {1: "john", 2: "doe"}
+dict2 = {2: "mark", 3: "chapel"}
 
+print(dict1 | dict2)
+print({**dict1, **dict2})
+
+dict3 = dict1.copy()
+dict3.update(dict2)
+print(dict3)
+
+#49 Nested Dict
+from pathlib import Path
+Path("D:/Computer").mkdir(parents =True, exist_ok=True)
+
+#50 Trace index using loop
+list = [1,2,4,6,7]
+for index, val in enumerate(list):
+  print(f"{index} : {val}")
+
+#51 Flatten a nested list
+list = [1,5,7,8,[5,7,8]]
+
+for index in list:
+  list_copy = list[-1]
+
+list_final = list[:-1] + list_copy
+
+print(list_final)
+
+#52 Slice list
+list = [1,4,6,7,8]
+
+print(list[:2])
+
+#53 Iterate over dict using loop
+dict = {1:"a",2:"b",3:"c"}
+
+for key, value in dict.items():
+  print(key, value) ##Difference: in list, we mention enumerate(list)
+  
+#54 Sort dict by value
+dict = {"a":23,"b":45,"c":11}
+sorted_dict = sorted(dict.values())
+print(sorted_dict)
+
+#55 Check empty list
+list = [1,2]
+
+if not list:
+  print("it's empty")
+
+print("It's not!")
+
+#56 Detect exceptions in line
+str = input("Enter: ")
+
+try:
+  num = int(input())
+  print(str+num)
+except (TypeError, ValueError) as e:
+  print(e)
+
+#57 Copy a file
+from shutil import copyfile
+copyfile("/root/a.txt", "/root/b.txt")
+
+#58 Concatenate 2 lists
+list1 = [3,5,6]
+list2 = [1,9,8]
+list1.extend(list2)
+print(list1)
+
+#59 Key in dict
+dict = {1:"messi", 2:"ronaldo", 3:"haaland"}
+if 2 in dict:
+  print("present")
+
+#60 Split list into chunks
+import numpy as np
+list = [1,2,3,4,6,7,8]
+
+print(np.array_split(list,4))
 
