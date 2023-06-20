@@ -574,7 +574,7 @@ filename = "a.jpg"
 
 jpeg_res(filename)
 
-#46 
+#46 Incomplete
 
 #47 Pyramid Patterns
 
