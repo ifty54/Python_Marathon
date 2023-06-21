@@ -627,7 +627,7 @@ for key, value in dict.items():
   print(key, value) ##Difference: in list, we mention enumerate(list)
   
 #54 Sort dict by value
-dict = {"a":23,"b":45,"c":11}
+dict = {"1st":23,"2nd":45,"3rd":11}
 sorted_dict = sorted(dict.values())
 print(sorted_dict)
 
