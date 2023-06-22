@@ -10,7 +10,7 @@ print(f"The sum of {num1} and {num2} is: {sum}")
 #3 Finding Sq rt
 a = 9
 sqrt_a = a**0.5
-print(f"The sq root of {a} is: {sqrt_a}")
+print(f"The square root of {a} is: {sqrt_a}")
 
 #4 Area of Triangle (1st Approach)
 
