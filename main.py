@@ -9,7 +9,7 @@ num2 = 5
 sum = num1 + num2
 print(f"The sum of {num1} and {num2} is: {sum}")
 
-#3 Finding Sq rt
+#3 Finding Square Root
 a = 9
 sqrt_a = a**0.5
 print(f"The square root of {a} is: {sqrt_a}")
