@@ -1,4 +1,5 @@
-##98 Programming Solutions
+##Programiz-Codes-98
+
 
 #1 Print Operation
 print("Hello World")
