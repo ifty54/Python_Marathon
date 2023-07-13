@@ -17,9 +17,9 @@ print(f"The square root of {a} is: {sqrt_a}")
 
 #4 Area of Triangle (1st Approach)
 
-base = float(input("Enter: "))
-height = float(input("Enter: "))
-hypotenuse = float(input("Enter: "))
+base = float(input("Enter your base: "))
+height = float(input("Enter your height: "))
+hypotenuse = float(input("Enter hypotenuse: "))
 
 triangle_area1 = (1 / 2) * base * height
 
