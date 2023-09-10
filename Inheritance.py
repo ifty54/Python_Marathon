@@ -34,3 +34,20 @@ class BlogPost(Book):
     self.website = website
     self.word_count = word_count
     self.page_views = page_views
+
+# Example 03
+class Parent1:
+  def identify(self):
+    return "This method is called from Parent1"
+    
+class Parent2:
+  def identify(self):
+    return "This method is called from Parent2"
+    
+# declare child class here
+class Child(Parent2, Parent1):
+  def identify(self):
+    return "This method is called from Child"
+  
+  def identify2(self):
+    return super().identify()
