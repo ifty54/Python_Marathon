@@ -1,3 +1,4 @@
+<!--Usage of @property decorator-->
 ## Getter
 class Person:
   def __init__(self, name):
@@ -57,3 +58,34 @@ c.age = -17
 c.name = False
 print(c.name)
 print(c.age)
+
+<!--Usage of property method-->
+class Person:
+  def __init__(self, name):
+    self._name = name
+  
+  def get_name(self):
+    return self._name
+  
+  name = property(get_name)
+  
+c = Person("Al Amin")
+print(c.name)
+
+# Ex 02
+class Person:
+  def __init__(self, name):
+    self._name = name
+  
+  def get_name(self):
+    return self._name
+  
+  def set_name(self, new_name):
+    self._name = new_name
+  
+  name = property(get_name, set_name)
+  
+c = Person("Papon")
+print(c.name)
+c.name = "Ifty"
+print(c.name)
