@@ -89,3 +89,33 @@ c = Person("Papon")
 print(c.name)
 c.name = "Ifty"
 print(c.name)
+
+
+# Ex 03
+class Dancer:
+  def __init__(self, name, nationality, style):
+    self._name = name
+    self._nationality = nationality
+    self._style = style
+    
+  def get_name(self):
+    return self._name
+  
+  def set_name(self, new_value):
+    self._name = new_value
+    
+  def get_nationality(self):
+    return self._nationality
+  
+  def set_nationality(self, new_value):
+    self._nationality = new_value
+    
+  def get_style(self):
+    return self._style
+  
+  def set_style(self, new_value):
+    self._style = new_value
+    
+  name = property(get_name, set_name)
+  nationality = property(get_nationality, set_nationality)
+  style = property(get_style, set_style)
