@@ -119,3 +119,34 @@ class Dancer:
   name = property(get_name, set_name)
   nationality = property(get_nationality, set_nationality)
   style = property(get_style, set_style)
+
+# Ex 04
+class Cyclist:
+  def __init__(self, name, nationality, nickname):
+    self._name = name
+    self._nationality = nationality
+    self._nickname = nickname
+    
+  @property
+  def name(self):
+    return self._name
+  
+  @name.setter
+  def name(self, new_value):
+    self._name = new_value
+    
+  @property
+  def nationality(self):
+    return self._nationality
+  
+  @nationality.setter
+  def nationality(self, new_value):
+    self._nationality = new_value
+    
+  @property
+  def nickname(self):
+    return self._nickname
+  
+  @nickname.setter
+  def nickname(self, new_value):
+    self._nickname = new_value
