@@ -8,7 +8,7 @@ class Person:
   def name(self):
     return self._name
   
-c = Person("Al Amin")
+c = Person("Al Amin Ifty")
 print(c.name)
 
 ## Setter
